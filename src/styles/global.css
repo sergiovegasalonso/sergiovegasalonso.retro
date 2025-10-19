@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "CourierPrime";
+  src: url("/src/assets/fonts/CourierPrime-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html.light {
+  --font-color: oklch(0 0 0);
+}
+
+html.dark {
+  --font-color: oklch(1 0 0);
+}
+
+* {
+  font-family: "CourierPrime", monospace;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  color: var(--font-color);
+}
