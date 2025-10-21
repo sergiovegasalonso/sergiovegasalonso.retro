@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+  --color-*: initial;
+  --color-light: oklch(98.7% 0.022 95.277);
+  --color-dark: oklch(21.6% 0.006 56.043);
+  --color-white: #fff;
+  --color-black: #000;
+}
+
 @font-face {
   font-family: "CourierPrime";
   src: url("/src/assets/fonts/CourierPrime-Regular.ttf");
@@ -8,17 +16,8 @@
   font-display: swap;
 }
 
-html.light {
-  --font-color: oklch(0 0 0);
-}
-
-html.dark {
-  --font-color: oklch(1 0 0);
-}
-
 * {
   font-family: "CourierPrime", monospace;
   font-optical-sizing: auto;
   font-variation-settings: "wdth" 100;
-  color: var(--font-color);
 }

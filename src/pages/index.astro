@@ -1,5 +1,6 @@
 ---
 import BreakLine from "@components/BreakLine.astro";
+import DownloadButton from "@components/buttons/DownloadButton.astro";
 import Heading1 from "@components/headings/Heading1.astro";
 import Page from "@components/Page.astro";
 import Layout from "@layouts/Layout.astro";
@@ -7,8 +8,18 @@ import Layout from "@layouts/Layout.astro";
 
 <Layout>
   <Page>
-    <Heading1>Sergio Vegas Alonso</Heading1>
+    <header class="flex justify-between">
+      <Heading1>Sergio Vegas Alonso</Heading1>
+      <DownloadButton />
+    </header>
     <BreakLine />
-    <p>HOllll</p>
+    <BreakLine />
+    <p>¡Hola! Mi nombre es Sergio y soy ingeniero de software.</p>
+    <BreakLine />
+    <p>
+      A lo largo de mi carrera he trabajado en muchos tipos de proyectos,
+      siempre con el foco en el rendimiento, las buenas prácticas y la mejora
+      continua.
+    </p>
   </Page>
 </Layout>
