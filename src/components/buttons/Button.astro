@@ -4,35 +4,9 @@ const { id, text } = Astro.props;
 
 <button
   id={id}
-  class="flex cursor-pointer border border-2 border-(--border-color) bg-(--foreground-color) px-2 py-1 shadow-(--shadow-sm)"
+  class="flex cursor-pointer border-2 px-2 py-1 lg:px-3 lg:py-2"
   aria-label={text}
 >
   <slot />
   <span class="hidden lg:ml-1 lg:inline">{text}</span>
 </button>
-
-<script define:vars={{ id }}>
-  const button = document.getElementById(id);
-
-  button?.addEventListener("mousedown", () => onMouseDown());
-
-  button?.addEventListener("touchstart", () => onMouseDown());
-
-  button?.addEventListener("mouseup", () => onMouseUpOrLeave());
-
-  button?.addEventListener("touchend", () => onMouseUpOrLeave());
-
-  button?.addEventListener("mouseleave", () => onMouseUpOrLeave());
-
-  button?.addEventListener("touchcancel", () => onMouseUpOrLeave());
-
-  function onMouseDown() {
-    button?.classList.add("transform-(--button-translation-on-clicking)");
-    button?.classList.remove("shadow-(--shadow-sm)");
-  }
-
-  function onMouseUpOrLeave() {
-    button?.classList.remove("transform-(--button-translation-on-clicking)");
-    button?.classList.add("shadow-(--shadow-sm)");
-  }
-</script>

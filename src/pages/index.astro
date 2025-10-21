@@ -1,7 +1,9 @@
 ---
 import BreakLine from "@components/BreakLine.astro";
 import DownloadButton from "@components/buttons/DownloadButton.astro";
+import ModeButton from "@components/buttons/ModeButton.astro";
 import Heading1 from "@components/headings/Heading1.astro";
+import HorizontalSpace from "@components/HorizontalSpace.astro";
 import Page from "@components/Page.astro";
 import Layout from "@layouts/Layout.astro";
 ---
@@ -10,7 +12,14 @@ import Layout from "@layouts/Layout.astro";
   <Page>
     <header class="flex justify-between">
       <Heading1>Sergio Vegas Alonso</Heading1>
-      <DownloadButton />
+      <div class="flex">
+        <DownloadButton />
+        <HorizontalSpace />
+        <HorizontalSpace />
+        <HorizontalSpace />
+        <HorizontalSpace />
+        <ModeButton />
+      </div>
     </header>
     <BreakLine />
     <BreakLine />
