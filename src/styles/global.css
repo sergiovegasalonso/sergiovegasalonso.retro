@@ -5,7 +5,9 @@
 @theme {
   --color-*: initial;
   --color-light: oklch(98.7% 0.022 95.277);
+  --color-highlightedLight: oklch(96.2% 0.059 95.617);
   --color-dark: oklch(21.6% 0.006 56.043);
+  --color-highlightedDark: oklch(26.8% 0.007 34.298);
   --color-white: #fff;
   --color-black: #000;
 }
